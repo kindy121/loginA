@@ -1,0 +1,120 @@
+body
+  background-color:  #fff;
+  margin-left 0px;
+  overflow: hidden;
+.cart-wrapper
+  padding-bottom: 42px
+  line-height: 1
+  *, *:before, *:after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    color: #fff
+    font-size: 12px
+  a
+    color: #fff
+    text-decoration: none
+    outline: none
+    transition: color .15s ease
+    &.link:hover
+      color: #e2231a !important
+      text-decoration: none
+    &.link-underline:hover
+      color: #e2231a !important
+      text-decoration: underline
+  .checkbox
+    display: none
+    & + label
+      padding-left: 24px
+      background: url('./checkbox_unchecked.png') left center no-repeat
+      cursor: pointer
+    &.unchecked-disabled + label
+      background: url('./checkbox_unchecked_disabled.png') left center no-repeat
+    &:checked + label
+      background: url('./checkbox_checked.png') left center no-repeat
+    &.checked-disabled:checked + label
+      background: url('./checkbox_checked.png') left center no-repeat
+  .radio
+    display: none
+    & + label
+      padding-left: 21px
+      background: url('./radio_unchecked.png') left center no-repeat
+      cursor: pointer
+    &:checked + label
+      background: url('./radio_checked.png') left center no-repeat
+  input[type="text"]
+    outline: none
+  .caret
+    width: 11px
+    height: 6px
+    background: url("./caret_down.png") no-repeat
+  .open > .caret
+    background: url("./caret_up.png") no-repeat
+  .img-wrapper:before
+    content: ""
+    position: absolute
+    width: inherit
+    height: inherit
+    background: url(../img/default.png) no-repeat
+    background-size: cover
+  .img-wrapper > img
+    position: relative
+  .btn
+    background-color: #e2231a
+    color: #fff
+    text-align: center
+    transition: background-color .15s ease, border .15s ease, color .15s ease
+    &:hover
+      background-color: #c81623
+      color: #fff
+      text-decoration: none
+    &:active
+      color: rgba(255, 255, 255, .6)
+  .btn-xxl
+    padding: 0 26px
+    height: 54px
+    line-height: 54px
+    font-size: 16px
+  .btn-xl
+    padding: 0 26px
+    height: 46px
+    line-height: 46px
+    font-size: 18px
+    font-weight: bold
+  .btn-l
+    padding: 0 16px
+    height: 36px
+    line-height: 36px
+    font-size: 14px
+  .btn-s
+    padding: 0 10px
+    height: 25px
+    line-height: 25px
+    font-size: 12px
+  .fade-enter-active, .fade-leave-active
+    transition: opacity .5s
+  .fade-enter, .fade-leave-to
+    opacity: 0
+  .backdrop-enter-active
+    transition: opacity .24s ease
+  .backdrop-leave-active
+    transition: opacity .21s ease
+  .backdrop-enter, .backdrop-leave-to
+    opacity: 0
+  .modal-enter-active
+    transition: transform .24s ease
+  .modal-leave-active
+    transition: transform .21s ease
+  .modal-enter
+    transform: translateY(20px) scale(0.98)
+  .modal-leave-to
+    transform: translateY(-20px) scale(1.01)
+.clearfix
+  zoom: 1
+  &:before,
+  &:after
+    display: table
+    line-height: 0
+    content: ""
+  &:after
+    clear: both
